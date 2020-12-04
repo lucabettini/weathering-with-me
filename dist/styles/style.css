@@ -139,6 +139,11 @@ body {
   margin: 1em auto 0 auto;
 }
 
+.location-searchbar input {
+  border-top-left-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+}
+
 .search-btn {
   background-color: #4793ff;
 }
