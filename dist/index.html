@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weathering with me</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+    <div class="container page-container">
+      <header>
+        <h1 class="text-center title title--big" id="title" >Weathering <span class="mobile-br"><br></span>with me</h1>
+
+        <div class="title-icons flex" id="title-icons">
+          <div class="title-icons__div" ><img src="./img/01d.svg" class="full-height img-fluid" /></div>
+          <div class="title-icons__div" ><img src="./img/10d.svg" class="full-height img-fluid" /></div>
+          <div class="title-icons__div" ><img src="./img/01d.svg" class="full-height img-fluid" /></div>
+          <div class="title-icons__div" ><img src="./img/02d.svg" class="full-height img-fluid" /></div>
+        </div>
+      </header>
+               
+      <div id="searchbar" class="searchbar-center">
+        <div class="location-searchbar">
+          <form class="input-group" action="/contact" method="POST" name="locationSearchbar">
+            <label for="longitude-searchbar" class="sr-only">Location</label>
+            <input type="text"class="form-control form-control-lg" placeholder="Choose a location" id="location-searchbar"/>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary search-btn" type="submit" id="location-btn"><i class="fas fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+
+        <div class="coordinates-searchbar hide">
+          <form name="coordinatesSearchbar" action="/contact" method="POST">
+            <div class="form-row">
+              <div class="form-group col-md-5">
+                <label for="latitude-searchbar" class="sr-only">Latitude</label>
+                <input class="form-control-lg full-width" type="text" placeholder="Latitude" id="latitude-searchbar" data-toggle="tooltip" data-placement="top" title="Coordinates must be provided in decimal degrees"  required/>
+              </div>
+              <div class="form-group col-md-5">
+                <label for="longitude-searchbar" class="sr-only">Latitude</label>
+                <input class="form-control-lg full-width" type="text" placeholder="Longitude" id="longitude-searchbar" data-toggle="tooltip" data-placement="top" title="Coordinates must be provided in decimal degrees" required/>
+              </div>
+              <div class="col-md-2">
+                 
+              <button type="submit" class="btn btn-lg btn-info btn-block" id="coordinates-btn" title="coordinates must be provided in decimal notation">Search</button>
+          
+              </div>
+            </div> </form>
+        </div> 
+
+
+        <a href='#' class='search-by-link'>Search by coordinates</a>
+      </div>
+            
+      <section class="current-container hide" id="current-container">
+          <p class="current__location" id="current-location"></p></br>
+          <div class="flex">
+              <div class="current__icon-container">
+                <img class="img-fluid" id="current-icon" alt="Weather icon" />
+              </div>
+              <div class="current__data-container">
+                  <p class="current__temperature" id="current-temperature"></p>
+                  <p class="current__weather current--details" id="current-weather"></p>
+                  <p class="current__humidity current--details" id="current-humidity"></p>
+                  <p class="current__wind current--details" id="current-wind"></p>
+              </div>
+          </div>  
+      </section>
+
+      <section class="forecast-container hide" id="forecast-container">
+        <table class="table table-sm">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Temp.</th>
+              <th scope="col">Weather</th>
+              <th scope="col">Hum.</th>
+              <th scope="col">Wind</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="forecast-data">
+              </th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row" class="forecast-data"></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row" class="forecast-data"></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row" class="forecast-data"></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row" class="forecast-data"></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>  
+    
+        
+    <footer>Developed by <a href="https://talent.start2impact.it/profile/luca-bettini">Luca Bettini</a> | Code available <a href="">here</a> </footer>
+   
+      </div>   
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/148cf564e2.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

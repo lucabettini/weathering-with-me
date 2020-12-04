@@ -1,0 +1,343 @@
+/*------------------------------------*\
+  #INDEX 
+
+  1.  DOCUMENTATION 
+  2.  FONTS 
+  3.  GLOBAL VARIABLES 
+  4.  BODY AND PAGE WRAPPER 
+  5.  HEADER
+  6.  NAVIGATION BAR 
+  7.  CURRENT CONTAINER
+  8.  FORECAST CONTAINER 
+  9.  FOOTER 
+  10. GLOBAL COMPONENTS 
+  11. MEDIA QUERIES
+  
+\*------------------------------------*/
+
+/*---------------------------------------------------------------------------*\
+  #DOCUMENTATION
+
+  - This website uses a responsive layout, created mobile-first using a 
+    combination of the Bootstrap framework, flexbox and grid. For screens 
+    larger than 1200px, the layout becomes fixed and centered in the page. 
+
+  - The header has two states: one before the first search [1] and another 
+    one [2] after. A JS function changes its classes.
+
+  - The searchbar also has two states, one before and one after the first search. 
+    This functionality is achieved using Bootstrap classes; a JS event listener
+    blocks this from happening on screen larger than 991px.
+
+  - There are 2 different searchbars, one that accepts locations (default) 
+    [3] and another one coordinates [4]. Again, a JS function ensures that the 
+    proper navbar is displayed, allowing the user to choose using the anchor 
+    element with the .search-by-link class [5].  
+
+  - The solution adopted in the first two media queries [6] was necessary to 
+    avoid a flawed layout of the title ("Weathering with // me"). Other minor 
+    adjustments were necessary at specific breakpoints. 
+
+  - B.E.M. naming conventions were used for classes whenever possible. 
+
+\*---------------------------------------------------------------------------*/
+
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Light-webfont.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Bold-webfont.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+/*------------------------------------*\
+  #GLOBAL VARIABLES AND BOX SIZING
+\*------------------------------------*/
+
+:root {
+  --main-color: rgba(0, 0, 0, 0.822);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+/*------------------------------------*\
+  # BODY AND PAGE WRAPPER 
+\*------------------------------------*/
+
+body {
+  background-color: #92ceff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  width: 98vw;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  padding: 25px;
+  height: 100vh;
+}
+
+/*------------------------------------*\
+  # HEADER  
+\*------------------------------------*/
+
+.title {
+  font-family: "Sansita Swashed", cursive;
+  color: var(--main-color);
+}
+
+.title--big {
+  /* [1] */
+  padding-top: 20%;
+  padding-bottom: 0.3em;
+  font-size: calc(50px + 1vw);
+}
+
+.title--small {
+  /* [2] */
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  font-size: calc(30px + 1vw);
+}
+
+.title-icons {
+  margin-bottom: 6em;
+  padding: 0 15%;
+  height: calc(40px + 1vw);
+}
+
+.title-icons__div {
+  text-align: center;
+}
+
+/*------------------------------------*\
+  # SEARCHBAR
+\*------------------------------------*/
+
+.location-searchbar {
+  /* [3] */
+  width: 100%;
+  margin: 1em auto 0 auto;
+}
+
+.search-btn {
+  background-color: #4793ff;
+}
+
+.coordinates-searchbar {
+  /* [4] */
+  width: 100%;
+  margin: 1em auto 0 auto;
+}
+
+.fa-search {
+  color: white;
+}
+
+.coordinates-searchbar input {
+  border: 0;
+  padding-bottom: 2px;
+  border-radius: 4px;
+}
+
+.coordinates-searchbar button {
+  background-color: #4793ff;
+}
+
+.search-by-link {
+  /* [5] */
+  display: block;
+  margin: 1.5em auto 1em auto;
+  text-align: center;
+  font-size: calc(10px + 1vw);
+  color: var(--main-color);
+}
+
+/*------------------------------------*\
+  # CURRENT-CONTAINER 
+\*------------------------------------*/
+
+.current-container {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.current__location {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: calc(25px + 1vw);
+}
+
+.current__icon-container {
+  margin-top: 0.5em;
+  padding-left: 10px;
+  padding-right: calc(20px + 1vw);
+  height: 25vh;
+}
+
+.current__data-container {
+  height: 25vh;
+  line-height: calc(1.5em + 1vw);
+}
+
+.current__temperature {
+  font-size: calc(25px + 1vw);
+  font-weight: bold;
+  text-align: left;
+  padding: 5px 0;
+}
+
+.current--details {
+  display: block;
+  margin: 0;
+  font-size: calc(13px + 1vw);
+}
+
+/*------------------------------------*\
+  # FORECAST-CONTAINER 
+\*------------------------------------*/
+
+.forecast-container {
+  font-size: calc(10px + 1vw);
+  padding-bottom: 20px;
+}
+
+/*------------------------------------*\
+  # FOOTER 
+\*------------------------------------*/
+
+footer {
+  margin-top: auto;
+  padding: 20px 15px 0 15px;
+  color: var(--main-color);
+  font-size: calc(10px + 1vw);
+  text-align: center;
+}
+
+footer a {
+  color: var(--main-color);
+}
+
+/*------------------------------------*\
+  # GLOBAL COMPONENTS 
+\*------------------------------------*/
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  grid-template-columns: 40% 40% 20%;
+}
+
+.mobile-br {
+  display: none;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.hide {
+  display: none !important;
+}
+
+/*------------------------------------*\
+  # MEDIA QUERIES 
+\*------------------------------------*/
+
+@media screen and (min-width: 290px) and (max-width: 340px) {
+  /* [6] */
+  .mobile-br {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 447px) and (max-width: 767px) {
+  /* [6] */
+  .mobile-br {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title--big {
+    font-size: calc(60px + 1.5vw);
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .title {
+    padding-top: 50px;
+  }
+
+  .title--small {
+    padding-top: 20px;
+  }
+
+  .searchbar-center {
+    padding-top: 100px;
+  }
+
+  .search-by-link {
+    font-size: calc(10px + 0.5vw);
+  }
+
+  .current__location {
+    font-size: calc(25px + 0.5vw);
+  }
+
+  .current__icon-container {
+    height: calc(200px + 1vw);
+  }
+
+  .current__data-container {
+    line-height: calc(1.5em + 0.5vw);
+  }
+
+  .current__temperature {
+    font-size: calc(25px + 0.5vw);
+  }
+
+  .current--details {
+    font-size: calc(13px + 0.5vw);
+  }
+
+  .forecast-container {
+    padding-bottom: calc(20px + 0.5vh);
+    line-height: 1.5em;
+    font-size: calc(10px + 0.5vw);
+  }
+
+  footer {
+    padding-top: 50px;
+    font-size: calc(10px + 0.5vw);
+    padding-bottom: 5px;
+  }
+}
