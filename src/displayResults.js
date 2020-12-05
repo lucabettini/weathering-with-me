@@ -45,13 +45,21 @@ function currentWeather(result) {
 
   function showIcons(path) {
     let iconCode = path.replace(/["]+/g, ''); 
-    if (iconCode.charAt(1) === '3' || iconCode.charAt(1) === '4' || iconCode.charAt(0) === '5') {
+    if (iconCode.charAt(0) === '0') {
+      if (iconCode.charAt(1) === '3' || iconCode.charAt(1) === '4' ) {
+        if (iconCode.charAt(2) === "d") {
+          iconCode = '02d'; 
+        } else {
+          iconCode = '02n'; 
+        }
+      }
+    } else if (iconCode.charAt(0) === '5') {
       if (iconCode.charAt(2) === "d") {
         iconCode = '02d'; 
       } else {
         iconCode = '02n'; 
       }
-    }
+    }; 
     return `./img/${iconCode}.svg`;
   }
   let img = document.getElementById('current-icon');
