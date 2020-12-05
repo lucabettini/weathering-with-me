@@ -22,6 +22,7 @@ function changeCSS() {
   // Change searchbar
   changeClass('searchbar', 'searchbar-center', null); 
   let width = document.documentElement.clientWidth;
+  console.log(width); 
   if (width > 990) {
     changeClass('location-searchbar', 'form-control-lg', 'form-control-md');
     changeClass('location-btn', null, 'btn-md');
