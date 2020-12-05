@@ -21,21 +21,11 @@ function changeCSS() {
 
   // Change searchbar
   changeClass('searchbar', 'searchbar-center', null); 
-  let width = document.documentElement.clientWidth;
-  console.log(width); 
-  if (width > 990) {
-    changeClass('location-searchbar', 'form-control-lg', 'form-control-md');
-    changeClass('location-btn', null, 'btn-md');
-    changeClass('latitude-searchbar', 'form-control-lg', 'form-control-md');
-    changeClass('longitude-searchbar', 'form-control-lg', 'form-control-md');
-    changeClass('coordinates-btn', 'btn-lg', 'btn-md');
-  } else {
-    changeClass('location-searchbar', 'form-control-lg', 'form-control-sm');
-    changeClass('location-btn', null, 'btn-sm');
-    changeClass('latitude-searchbar', 'form-control-lg', 'form-control-sm');
-    changeClass('longitude-searchbar', 'form-control-lg', 'form-control-sm');
-    changeClass('coordinates-btn', 'btn-lg', 'btn-sm');
-  }
+  changeClass('location-searchbar', 'form-control-lg', 'form-control-sm');
+  changeClass('location-btn', null, 'btn-sm');
+  changeClass('latitude-searchbar', 'form-control-lg', 'form-control-sm');
+  changeClass('longitude-searchbar', 'form-control-lg', 'form-control-sm');
+  changeClass('coordinates-btn', 'btn-lg', 'btn-sm');
 
   // Display div containers for rendering data
   changeClass('current-container', 'hide', null);
