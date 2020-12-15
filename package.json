@@ -1,22 +1,22 @@
 {
-  "name": "weather-api",
+  "name": "weathering-with-me",
   "version": "1.0.0",
-  "description": "Weather API",
+  "description": "Weathering with me",
   "private": true,
   "scripts": {
     "build": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ra-va/weather-api.git"
+    "url": "git+https://github.com/lucabettini/weathering-with-me.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ra-va/weather-api/issues"
+    "url": "https://github.com/lucabettini/weathering-with-me/issues"
   },
-  "homepage": "https://github.com/ra-va/weather-api#readme",
+  "homepage": "https://lucabettini.github.io/weathering-with-me",
   "devDependencies": {
     "dotenv-webpack": "^6.0.0",
     "eslint": "^7.2.0",
