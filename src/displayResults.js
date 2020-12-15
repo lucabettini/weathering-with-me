@@ -47,18 +47,10 @@ function currentWeather(result) {
     let iconCode = path.replace(/["]+/g, ''); 
     if (iconCode.charAt(0) === '0') {
       if (iconCode.charAt(1) === '3' || iconCode.charAt(1) === '4' ) {
-        if (iconCode.charAt(2) === "d") {
-          iconCode = '02d'; 
-        } else {
-          iconCode = '02n'; 
-        }
+        iconCode = (iconCode.charAt(2) === "d") ? '02d' : '02n';
       }
     } else if (iconCode.charAt(0) === '5') {
-      if (iconCode.charAt(2) === "d") {
-        iconCode = '02d'; 
-      } else {
-        iconCode = '02n'; 
-      }
+      iconCode = (iconCode.charAt(2) === "d") ? '02d' : '02n'; 
     }; 
     return `./img/${iconCode}.svg`;
   }
@@ -124,7 +116,8 @@ function addForecast(result) {
 }
 
 
-// Wrapper function 
+//////////////// WRAPPER FUNCTION  ///////////////
+
 function displayResults(result) {
   changeCSS();
   currentWeather(result);

@@ -25,7 +25,7 @@ $(function () {
 });
 
 
-////////// FUNCTION THAT DISPLAYS APPROPRIATE SEARCHBAR ///////////
+//////////////////////// DISPLAY APPROPRIATE SEARCHBAR ////////////////////////
 
 let status = 'location';
 const link = document.getElementsByClassName('search-by-link')[0];
@@ -41,9 +41,8 @@ link.addEventListener('click', (event) => {
 });
 
 
-////////////// FUNCTION THAT LISTENS TO USER INPUT ////////////////
+///////////////////////////// LISTEN TO USER INPUT ////////////////////////////
 
-//Event-listener dei forms
 const locationForm = document.forms.locationSearchbar;
 locationForm.addEventListener('submit', (event) => {
   event.preventDefault();
