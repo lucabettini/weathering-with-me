@@ -1,5 +1,7 @@
 # WEATHERING WITH ME
 
+<i>Completed and deployed on Github Pages on December 15, 2020 - new deploy on private server on October 2, 2021<i>
+
 This website was created as a project for [Start2Impact](https://www.start2impact.it/).<br>
 The requisites were:
 
