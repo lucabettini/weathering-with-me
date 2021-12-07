@@ -1,8 +1,10 @@
 # [WEATHERING WITH ME](https://weatheringwithme.lucabettini.com)
 
-<i>Completed and deployed on Github Pages on December 15, 2020 - new deploy on DigitalOcean droplet on October 2, 2021</i>
-
 ![weathering with me homepage image](https://lucabettini.com/images/weatheringwithme_1.jpg)
+
+---
+
+<i>Completed and deployed on Github Pages on December 15, 2020 - new deploy on DigitalOcean droplet on October 2, 2021</i>
 
 This website was created as a project for [Start2Impact](https://www.start2impact.it/).<br>
 
