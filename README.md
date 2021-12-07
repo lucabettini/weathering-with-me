@@ -1,4 +1,4 @@
-![weathering with me homepage image](https://lucabettini.com/images/weatheringwithme_2.jpg)
+![weathering with me homepage image](https://lucabettini.com/images/weatheringwithme_1.jpg)
 
 # [WEATHERING WITH ME](https://weatheringwithme.lucabettini.com)
 
