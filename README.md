@@ -18,3 +18,8 @@ The layout was made using [Bootstrap](https://getbootstrap.com/), [Font Awesome]
 ---
 
 Made by [Luca Bettini](https://lucabettini.github.io/index.html).
+
+---
+
+![weathering with me homepage image](https://lucabettini.com/images/weatheringwithme_1.jpg)
+![weathering with me homepage image](https://lucabettini.com/images/weatheringwithme_2.jpg)
