@@ -1,3 +1,5 @@
+![weathering with me homepage image](https://lucabettini.com/images/weatheringwithme_1.jpg)
+
 # [WEATHERING WITH ME](https://weatheringwithme.lucabettini.com)
 
 <i>Completed and deployed on Github Pages on December 15, 2020 - new deploy on private server on October 2, 2021</i>
@@ -21,5 +23,4 @@ Made by [Luca Bettini](https://lucabettini.github.io/index.html).
 
 ---
 
-![weathering with me homepage image](https://lucabettini.com/images/weatheringwithme_1.jpg)
 ![weathering with me homepage image](https://lucabettini.com/images/weatheringwithme_2.jpg)
